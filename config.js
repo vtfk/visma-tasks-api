@@ -9,6 +9,11 @@ module.exports = {
     me: {
       url: process.env.GRAPH_ME_ENDPOINT || 'https://graph.microsoft.com/v1.0/me',
       properties: 'id,userPrincipalName,onPremisesSamAccountName,displayName'
+    },
+    org: {
+      url: process.env.GRAPH_ORG_ENDPOINT || 'https://graph.microsoft.com/v1.0/organization',
+      properties: 'id',
+      tenantId: process.env.GRAPH_TENANT_ID || '08f3813c-9f29-482f-9aec-16ef7cbf477a'
     }
   },
   papertrail: {

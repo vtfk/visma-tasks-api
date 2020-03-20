@@ -48,7 +48,10 @@ You'll need the [now-cli](https://zeit.co/now) installed to do local development
 ### Environment variables
 .env
 ```
+NODE_ENV=development
 GRAPH_ME_ENDPOINT=https://graph.microsoft.com/v1.0/me
+GRAPH_ORG_ENDPOINT=https://graph.microsoft.com/v1.0/organization
+GRAPH_TENANT_ID=08f3813c-9f29-482f-9aec-16ef7cbf477a
 VISMA_URL=http://vismaserver:8080/hrm_ws/secure/tasks/username/
 VISMA_USERNAME=task-ws
 VISMA_PASSWORD=Passw0rd

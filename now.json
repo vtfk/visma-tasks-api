@@ -36,8 +36,9 @@
     }
   ],
   "env": {
-    "NODE_ENV": "production",
     "GRAPH_ME_ENDPOINT": "https://graph.microsoft.com/v1.0/me",
+    "GRAPH_ORG_ENDPOINT": "https://graph.microsoft.com/v1.0/organization",
+    "GRAPH_TENANT_ID": "08f3813c-9f29-482f-9aec-16ef7cbf477a",
     "VISMA_URL": ":visma-tasks-url",
     "VISMA_USERNAME": ":visma-tasks-username",
     "VISMA_PASSWORD": ":visma-tasks-password",
