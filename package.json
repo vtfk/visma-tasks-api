@@ -1,0 +1,25 @@
+{
+  "name": "visma-tasks-api",
+  "version": "1.0.0",
+  "description": "Collects tasks from Visma HRM",
+  "main": "index.js",
+  "scripts": {
+    "start": "now dev"
+  },
+  "keywords": [
+    "vtfk",
+    "Vestfold og Telemark fylkeskommune",
+    "Visma HRM",
+    "tasks",
+    "Zeit"
+  ],
+  "author": "Vestfold og Telemark fylkeskommune",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "node-cache": "^5.1.0",
+    "winston": "2.4.4",
+    "winston-papertrail": "1.0.5",
+    "xml2js-parser": "^1.1.1"
+  }
+}

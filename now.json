@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "/*.md",
+      "use": "@now/md"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/README.html"
+    },
+    {
+      "src": "/.*",
+      "headers": {
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Origin": "*"
+      },
+      "continue": true
+    },
+    {
+      "src": "/api/.*",
+      "methods": ["OPTIONS"],
+      "dest": "/api/cors-handler.js"
+    },
+    {
+      "src": "/api/tasks",
+      "methods": ["GET"],
+      "dest": "/api/tasks.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "GRAPH_ME_ENDPOINT": "https://graph.microsoft.com/v1.0/me",
+    "VISMA_URL": ":visma-tasks-url",
+    "VISMA_USERNAME": ":visma-tasks-username",
+    "VISMA_PASSWORD": ":visma-tasks-password",
+    "CACHE": ":visma-tasks-cache",
+    "PAPERTRAIL_HOSTNAME": "visma-tasks-api",
+    "PAPERTRAIL_HOST": ":papertrail-host",
+    "PAPERTRAIL_PORT": ":papertrail-port"
+  }
+}
